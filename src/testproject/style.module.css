@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.headersection{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+.header {
+    display: flex;
+    width: 1300px;
+    margin: 0 auto 100px;
+    padding: 20px 50px;
+    justify-content: space-between;
+    align-items: center;
+    position:absolute;
+    z-index: 1;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    background-color: rgb(177, 204, 198);
+}
+
+.logo{
+    width: 45px;
+    height: 60px;
+    display: flex;
+    justify-content: left;
+    cursor: pointer;
+}
+
+.imgstyle{
+    width: 60px;
+    height: 60px;
+    display: flex;
+   align-items: end;
+   cursor: pointer;
+}
+.navSection {
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    gap: 50px;
+    
+}
+.navlink{
+    text-decoration: none;
+    font-weight: bolder;
+    color:#264653;
+    font-size: 26px;
+
+}
+.navlink1{
+    text-decoration: none;
+    font-weight: bolder;
+    color:#1e2d44;;
+    font-size: 36px;
+    color: linear-gradient(90deg, #264653,rgb(177, 204, 198));
+}
+.buttonStyle{
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+     color: black;
+    font-size: 16px;
+}
+.profileButton{
+     position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+   
+}
+
+
+.yellow{
+background-color: rgb(209, 218, 90);
+}
+.green{
+background-color: rgb(145, 219, 141);
+}
+.buttonSection{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:90px;
+    right: -15px;
+    width: 85px;
+    gap:10px;
+    
+}
+.headersectionthree{
+    display: flex;
+    position: relative;
+}
+ /* registration page style */
+
+.formIntut{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    gap: 20px;
+    padding: 30px;
+    margin: 150px auto;
+    border: 1px solid #E9C46A;;
+    background-color: #264653;
+    border-radius: 20px;
+}
+.formIntut input {
+padding: 10px 15px;
+border: 1px solid #E9C46A;
+background-color: rgb(204, 199, 199);
+border-radius: 20px;
+}
+
+ /* loader */
+ .container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(197, 193, 193);
+    justify-content: center;
+    align-items: center;
+ }
+ .loaderimg {
+     display: flex;
+     width: 100px;
+     height: 100px;
+ 
+ }
+
+ /* validationPage-სტილები */
+
+ .validFormIntut{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 20px;
+    padding: 30px;
+    margin: 300px auto;
+    border: 1px solid transparent;
+    background-color: #264653;
+    border-radius: 20px;
+
+ }
+ .validFormIntut input{
+padding: 10px 15px;
+border: 1px solid transparent;
+background-color: rgb(204, 199, 199);
+border-radius: 20px;
+
+ }
+ .unputbuttonStyle{
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    background-color: rgb(177, 204, 198);
+    border-radius: 20px;
+    display: inline-block;
+    width: 130px;
+    margin: 0 auto;
+    
+}
+/* user page */
+
+.userCard{
+    display: flex;
+    flex-direction: column;
+    width: 900px;
+    gap: 15px;
+    padding: 10px;
+    margin: 200px auto;
+    position: relative;
+}
+.cardSection{
+    display: flex;
+    width: 100%;
+    background-color: #264653;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.imgSection{
+    display: flex;
+    width: 45%;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.imgSection img{
+    width: 100%;
+    height: 100%;
+}
+.contactSection{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+    border: 1px solid wheat;
+    width: 100%;
+    color:  rgb(247, 234, 234);
+    
+}
+span{
+    color: wheat;
+}
+.cardbuttonStyle{
+    display: flex;
+    margin: 10px auto;
+    width: 150px;
+    padding: 15px 40px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    text-decoration: none;
+    background: linear-gradient(90deg, #264653,rgb(177, 204, 198));
+    color: rgb(247, 234, 234);
+    font-weight: bolder;
+    font-size: 18px;
+}
+.usContactSection{
+    display: flex;
+    gap: 50px;
+    padding: 20px;
+    border: 1px solid wheat;
+    width: 100%;
+    border-radius: 20px;
+    color: rgb(247, 234, 234);
+    background-color: #264653;
+    
+}
+
+
+
+/* hpmePage სრილები */
+
+.homStule {
+    background-image: url("../assets/cover.jpg");
+     position: relative;    /* მშობბელ ელემენტს  */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+/* student list style  */
+.projectsSection{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 1200px;
+    margin: 200px auto;
+    gap: 50px;
+}
+.project{
+       position: relative;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    background: linear-gradient(90deg, #264653, rgb(177, 204, 198));
+} 
+.cardImg{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+.cardImg img{
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.sectiOnone{
+    padding: 15px;
+    background: white;
+    transition: opacity 0.3s ease-in-out;
+    background: linear-gradient(90deg, #264653,rgb(177, 204, 198));
+}
+
+
+.secoundSection {
+    display: none;
+    background: white;
+    padding: 15px;
+    transition: opacity 0.3s ease-in-out;
+    background: linear-gradient(90deg, #264653,rgb(177, 204, 198));
+}
+.project:hover .cardImg {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    border: 10px solid gray;
+    border-radius: 50%;
+}
+.project:hover .sectiOnone {
+    margin-top: 140px;
+}
+.project:hover .secoundSection {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.aboutseqtion{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    padding: 50px;
+    gap:50px;
+    margin: 200px auto;
+ 
+}
+.aboutContantSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aboutContantSection h1{
+    font-size: 50px;
+}
+.aboutImgSection img{
+    height: 700px;
+}
+
+
+/* ვერიფიკაციის ბათონის და ლინკების სტილები */
+
+.userName{
+    display: flex;
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: #264653;
+    color: #E9C46A;
+    cursor: pointer;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.red{
+     padding: 10px 15px;
+    background-color: red;
+     font-weight: bolder;
+      color:#1e2d44;
+}
+.blu{
+     padding: 10px 15px;
+    background-color: rgb(177, 204, 198);
+   color:#1e2d44;
+    font-weight: bolder;
+}
+
