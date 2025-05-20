@@ -4,12 +4,19 @@ import userimg from "../assets/user.png"
 import css from "./style.module.css"
 import { useState } from "react"
 import { useVerification } from "./Context/Uzercontext"
+import { useThema } from "./Context/ThemeContext"
+import { useLanguage } from "./Context/LanguageContext"
+
 
 
 
 
 
 export const Header =() => {
+
+    const {theme, setTheme} = useThema()
+
+    const {language, LanguageToggle} = useLanguage()
 
 
 
@@ -41,6 +48,14 @@ export const Header =() => {
 
 
                  <div className={css.headersectionthree}>
+
+                        <div className={css.MoudeButton}>
+                            <button onClick={LanguageToggle} className={ language === "en" ? (css.enFlage) : (css.kaFlage)}> </button>
+                        </div>
+
+                        <div className={css.MoudeButton}>
+                            <button onClick={() => setTheme((prev) => (!prev))} className={ theme ? (css.lightMode) : (css.darkMode)}> </button>
+                        </div>
 
                 
                     {user 
