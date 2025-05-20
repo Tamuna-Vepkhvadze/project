@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { useReciveRequest } from "./hooks/reciveRequest"
 import css from "./style.module.css"
 import { useVerification } from "./Context/Uzercontext"
+import { LoaaderPage } from "./loader"
 
 
 
@@ -42,7 +43,7 @@ export const ValidPage = () => {
         let userId = user.id
         navigate(`/profile/${userId}`, {state: user})
     }
-    if (loader && data) return <p>Loading .....</p>
+    if (loader && !data) return <LoaaderPage/>
     if (error)  return <p>შეცდომა: {error.message}</p>;
     return(
         <div>
