@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 .headersection{
     display: flex;
     flex-direction: column;
@@ -109,6 +108,7 @@ background-color: rgb(145, 219, 141);
 .headersectionthree{
     display: flex;
     position: relative;
+    gap: 35px;
 }
  /* registration page style */
 
@@ -362,9 +362,109 @@ span{
       color:#1e2d44;
 }
 .blu{
-     padding: 10px 15px;
+    padding: 10px 15px;
     background-color: rgb(177, 204, 198);
-   color:#1e2d44;
+    color:#1e2d44;
     font-weight: bolder;
+}
+
+
+
+.MoudeButton{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+}
+
+.lightMode {
+    background-image: url("../assets/sun.png"); 
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.darkMode {
+    background-image: url("../assets/moon.png");
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+body {
+    background-color: #121212;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.darckBody {
+    background-color: white;
+    color: black ;
+}
+
+
+.SuccessfulVrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 250px auto;
+    padding: 50px;
+    gap: 35px;
+}
+.SuccessfulButton{
+    display: inline-flex;        
+    justify-content: center;     
+    align-items: center;         
+    padding: 15px 20px;  
+    margin: 0 auto;        
+    width: 200px;                
+    text-align: center;         
+    background-color: #264653;   
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;       
+}
+.title{
+    font-size: 45px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+
+.enFlage{
+    background-image: url("../assets/en.png");
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.kaFlage{
+    background-image: url("../assets/ka.png"); 
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
 }
 

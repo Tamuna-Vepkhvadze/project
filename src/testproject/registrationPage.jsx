@@ -45,7 +45,7 @@ export const RegistrationPage = () => {
             }
             setValidError(null)
             sendRequest(userData)
-            .then(() => navigate("/"))
+            .then(() => navigate("/successful-registration"))
         }
         if(loader && userData) return <p>Loading...</p>
         if(error) return <p>შეცდომა</p>

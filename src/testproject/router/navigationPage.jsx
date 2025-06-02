@@ -5,10 +5,12 @@ import { RegistrationPage } from "../registrationPage";
 import { AboutPage } from "../aboutPage";
 import { UserList } from "../userList";
 import { UserProfile } from "../uzerProfile";
-import { Loaader } from "../loader";
 import { ValidPage } from "../validPage";
 import { ValidationVrapper } from "../Context/Uzercontext";
 import { Outlet } from "react-router-dom";
+import { ThemeVrapper } from "../Context/ThemeContext";
+import { SuccessfulRegistration } from "../SuccessfulRegistration";
+import { LanguageVrapper } from "../Context/LanguageContext";
 
 
 export const Navigation = [
@@ -18,13 +20,16 @@ export const Navigation = [
     {
         
         element: (
+        <LanguageVrapper>
+            <ThemeVrapper>
+                <ValidationVrapper>
 
-           
-        <ValidationVrapper>
-            <Header/>
-            <Outlet/>
-        </ValidationVrapper>
+                    <Header/>
+                    <Outlet/>
 
+                </ValidationVrapper>
+            </ThemeVrapper>
+        </LanguageVrapper>
 
         ),
         path: "/",
@@ -42,7 +47,7 @@ export const Navigation = [
                 element: <UserList/>,
                 path: "UserList"
             },
-                {
+            {
                 element: <UserProfile/>,
                 path: "profile/:userId"
             },
@@ -51,18 +56,17 @@ export const Navigation = [
                 element: <ValidPage/>,
                 path:"validPage"
             },
-              {
+            {
             element: <RegistrationPage/>,
             path: "RegistrationPage"
-        },
+            },
+            {
+                element: <SuccessfulRegistration/>,
+                path: "successful-registration"
+            }
           
         ]
     },
-        
-        {  
-            element: <Loaader/>,
-            path:"Loaader",
-        },
         {
             path: "*",
             element: <p>გვერდი ვერ მოიძებნა</p>
