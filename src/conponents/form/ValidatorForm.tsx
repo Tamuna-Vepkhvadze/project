@@ -8,7 +8,7 @@ interface LoginProps {
 }
 const ValidatorForm = ({login, onChange,  onSubmit}: LoginProps) => {
   return (
-    <form onSubmit={onSubmit}>
+    <form className="login-form" onSubmit={onSubmit}>
       <input type="text" name="email" placeholder="email" value={login.email} onChange={onChange}/>
       <input type="password" name="password" placeholder="password" value={login.password} onChange={onChange}/>
       <button type='submit'>Login</button>

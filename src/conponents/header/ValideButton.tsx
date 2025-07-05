@@ -15,11 +15,11 @@ const ValidButton = () => {
    
   return (
 
-        <div>
-          {buttonOtions.map((button, index) => 
-            <Link to={button.url} key={index} >{button.name} </Link>
-          )}
-        </div> 
+     <div className="valid-button">
+      {buttonOtions.map((button, index) => 
+        <Link to={button.url} key={index} >{button.name}</Link>
+      )}
+    </div> 
   )
 }
 

@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useState, type ReactNode } from "react";
 import type { ConextType, ResponseUserData } from "../interface/Interface";
-import { my_axios } from "../conponents/axsios/Axios";
 import { useNavigate } from "react-router-dom";
+import { AxiosService } from "../conponents/axsios/AxiosService";
 
 const createCotext = createContext<ConextType>({} as ConextType)
 
@@ -16,8 +16,8 @@ export const AuthContext = ({children}: {children: ReactNode}) => {
 
         const featchUser = async () => {
             try {
-                const response = await my_axios.get("/refresh")
-                setAuthUser(response.data)
+                const response = await AxiosService.refresh()
+                setAuthUser(response.data.user)
 
             } catch (error) {
                 console.log(error)
@@ -25,6 +25,7 @@ export const AuthContext = ({children}: {children: ReactNode}) => {
             } finally {
                 setLoader(false)
             }
+
         }
 
         featchUser()
@@ -34,7 +35,7 @@ export const AuthContext = ({children}: {children: ReactNode}) => {
 
     const logout = useCallback(() => {
         
-            my_axios("/logout")
+            AxiosService.logout()
             .then(() => setAuthUser(null))
             .then(() => localStorage.removeItem("lokalKey"))
             .then(() => navigate("/login"))

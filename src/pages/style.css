@@ -1,0 +1,410 @@
+/* გლობალური ნულოვანი მარჯინი, პადინგი და ბოქს-საიზინგი */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* შენი header-ის სტილი */
+.header {
+  background-color: #1e90ff;
+  color: white;
+  padding: 20px 40px; /* უკვე პიქსელებშია */
+  display: flex;
+  width: 1400px;
+  margin: 0px auto;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.header__title h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 28px; /* 1.8rem დაახლოებით 28px */
+}
+
+.header__buttons {
+  display: flex;
+  gap: 15px; /* აქაც პიქსელია */
+}
+
+.loading {
+  font-size: 32px; /* 2rem დაახლოებით 32px */
+  text-align: center;
+  margin-top: 50px;
+  color: #333;
+}
+
+
+
+
+/* Navigation.css */
+nav {
+  background-color: #f0f0f0;
+  padding: 10px 20px; /* პიქსელები */
+  display: flex;
+  gap: 20px; /* ელემენტებს შორის დისტანცია */
+  font-size: 16px; /* პიქსელები */
+  border-radius: 15px;
+}
+
+nav a {
+  color: #1e90ff;
+  text-decoration: none;
+  padding: 6px 12px; /* პიქსელები */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #d0e6ff;
+}
+
+nav a.active {
+  font-weight: 700;
+  color: #104e8b;
+  border-bottom: 2px solid #104e8b;
+}
+
+.valid-button {
+  display: flex;
+  gap: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.valid-button a {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #1e90ff;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(30, 144, 255, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valid-button a:hover {
+  background-color: #104e8b;
+  box-shadow: 0 6px 16px rgba(16, 78, 139, 0.7);
+}
+
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  background-color: #f2f6fc;
+  min-height: 100vh;
+}
+
+.home__content {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.home__title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1e90ff;
+}
+
+.home__description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.home__button {
+  padding: 12px 24px;
+  background-color: #1e90ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.home__button:hover {
+  background-color: #156fd6;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  background-color: #f9fbfd;
+  min-height: 100vh;
+}
+
+.contact__content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.contact__title {
+  font-size: 26px;
+  color: #1e90ff;
+  margin-bottom: 20px;
+}
+
+.contact__description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.contact__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #333;
+  font-size: 15px;
+}
+
+.contact__list li {
+  margin-bottom: 10px;
+}
+
+
+
+/* InvalidButton.css */
+.invalid-button {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.invalid-button a {
+  color: #1e90ff;
+  text-decoration: none;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(30, 144, 255, 0.4);
+  background-color: #d0e6ff;
+}
+
+.invalid-button a:hover {
+  background-color: #1e90ff;
+  color: white;
+  border-color: #104e8b;
+  box-shadow: 0 4px 12px rgba(16, 78, 139, 0.6);
+}
+
+.invalid-button button {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #ff4d4f, #d9363e);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 77, 79, 0.6);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.invalid-button button:hover {
+  background: linear-gradient(135deg, #d9363e, #a72a2b);
+  box-shadow: 0 6px 18px rgba(167, 42, 43, 0.8);
+}
+
+
+
+.form {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px 25px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.form input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form input:focus {
+  border-color: #1e90ff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(30, 144, 255, 0.5);
+}
+
+.form button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #104e8b;
+}
+
+
+
+.login-form {
+  max-width: 320px;
+  margin: 40px auto;
+  padding: 20px 24px;
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.login-form input:focus {
+  border-color: #1e90ff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(30, 144, 255, 0.5);
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #1e90ff;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #104e8b;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile__card {
+  display: flex;
+  gap: 24px;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile__image img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #1e90ff;
+}
+
+.profile__info p {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #333;
+}
+
+.profile__info strong {
+  color: #1e90ff;
+}
+
+.profile-loading {
+  text-align: center;
+  font-size: 24px;
+  color: #555;
+  margin-top: 50px;
+}
+
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.user-card {
+  display: flex;
+  gap: 20px;
+  width: 320px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.user-card__image img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #1e90ff;
+}
+
+.user-card__info p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.user-card__info strong {
+  color: #1e90ff;
+}

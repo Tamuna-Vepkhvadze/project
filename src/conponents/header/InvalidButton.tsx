@@ -4,11 +4,12 @@ import { useAuthUser } from '../../context/AuthContext'
 
 const InvalidButton = () => {
     const {logout} = useAuthUser()
+  
   return (
-        <div>
-            <Link to={"/profile"} >Profile</Link>
-            <button onClick={logout}>Logaut</button>
-        </div>
+       <div className="invalid-button">
+      <Link to="/Profile">Profile</Link>
+      <button onClick={logout}>Logout</button>
+    </div>
   )
 }
 

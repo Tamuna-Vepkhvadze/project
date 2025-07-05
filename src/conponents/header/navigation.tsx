@@ -12,10 +12,18 @@ const Navigation = () => {
         {path: "/contact", element: "Contact"},
     ]
   return (
-    <nav>
-        {nav.map((nav, index) => 
-            <NavLink key={index} to={nav.path}>{nav.element} </NavLink>
-        )}
+   <nav className="nav">
+      {nav.map((item, index) => (
+        <NavLink
+          key={index}
+          to={item.path}
+          className={({ isActive }) =>
+            isActive ? 'nav__link nav__link--active' : 'nav__link'
+          }
+        >
+          {item.element}
+        </NavLink>
+      ))}
     </nav>
   )
 }

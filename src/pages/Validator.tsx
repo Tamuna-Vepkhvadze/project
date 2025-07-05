@@ -27,7 +27,7 @@ const Validator = () => {
     try {
       const response = await AxiosService.login(login)
       localStorage.setItem("lokalKey", response.data.accessToken)
-      setAuthUser(response.data)
+      setAuthUser(response.data.user)
       setLogin({
         email: "",
         password: ""
