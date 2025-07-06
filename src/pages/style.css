@@ -1,4 +1,4 @@
-/* გლობალური ნულოვანი მარჯინი, პადინგი და ბოქს-საიზინგი */
+გლობალური ნულოვანი მარჯინი, პადინგი და ბოქს-საიზინგი
 * {
   margin: 0;
   padding: 0;
@@ -98,8 +98,8 @@ nav a.active {
   justify-content: center;
   align-items: center;
   padding: 100px 20px;
-  background-color: #f2f6fc;
   min-height: 100vh;
+ 
 }
 
 .home__content {
@@ -407,4 +407,25 @@ nav a.active {
 
 .user-card__info strong {
   color: #1e90ff;
+}
+
+
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+
+
+.test{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }

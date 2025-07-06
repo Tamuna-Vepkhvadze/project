@@ -17,11 +17,13 @@ export const AuthContext = ({children}: {children: ReactNode}) => {
         const featchUser = async () => {
             try {
                 const response = await AxiosService.refresh()
-                setAuthUser(response.data.user)
+               if(response){
+                  setAuthUser(response.data.user)
+                }
 
             } catch (error) {
                 console.log(error)
-                alert("operation filed")
+                
             } finally {
                 setLoader(false)
             }
