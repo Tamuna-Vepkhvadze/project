@@ -1,13 +1,15 @@
-import { useAuthUser } from "../context/AuthContext"
+import { useAppSelector } from "../store/hook"
+
 
 export const Profile = () => {
-
-    const {auhtUser, loader} = useAuthUser()
-if(loader)
-    return <h1>Loading ....</h1>
-
-
+ 
+   
+const auhtUser = useAppSelector(state => state.login.user)
+if(!auhtUser) return <h1>Loading ...</h1>
     return(
+      
+
+      
         <div className="profile">
       {auhtUser && (
         <div className="profile__card">

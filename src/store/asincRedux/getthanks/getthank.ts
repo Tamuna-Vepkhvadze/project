@@ -32,7 +32,7 @@ export const refreshUsers = createAsyncThunk(
     try {
 
         const responce = await AxiosService.refresh()
-        const data:ResponseUserData[] = responce.data.user
+        const data:ResponseUserData = responce.data.user
         return data
         
     } catch (error) {

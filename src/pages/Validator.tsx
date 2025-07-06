@@ -1,13 +1,16 @@
 import { useState, type ChangeEvent, type FormEvent } from "react"
 import ValidatorForm from "../conponents/form/ValidatorForm"
 import type { UserValid } from "../interface/Interface"
-import { AxiosService } from "../conponents/axsios/AxiosService"
-import { useAuthUser } from "../context/AuthContext"
 import { useNavigate } from "react-router-dom"
+import { useAppDispatch} from "../store/hook"
+import { posttank } from "../store/asincRedux/postthank/posttank"
+
 
 const Validator = () => {
 
-  const {setAuthUser} = useAuthUser()
+  const dispach = useAppDispatch()
+
+
   const navigate = useNavigate()
 
   const [login, setLogin] = useState<UserValid>({
@@ -25,9 +28,8 @@ const Validator = () => {
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     try {
-      const response = await AxiosService.login(login)
-      localStorage.setItem("lokalKey", response.data.accessToken)
-      setAuthUser(response.data.user)
+       await dispach(posttank(login )).unwrap()
+      
       setLogin({
         email: "",
         password: ""

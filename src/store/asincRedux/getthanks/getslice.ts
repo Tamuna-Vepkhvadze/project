@@ -4,14 +4,14 @@ import { getthank, refreshUsers } from "./getthank";
 
 interface getType {
     usersGrup:ResponseUserData[]
-    user:ResponseUserData[]
+    user:ResponseUserData | null 
     loader:boolean,
     error: string | null   
 }
 
 const state:getType ={
     usersGrup:[],
-    user: [],
+    user: null,
     loader: false,
     error:null
 }
@@ -46,7 +46,7 @@ const getslice = createSlice({
         .addCase(refreshUsers.fulfilled, (state, action) => {
             state.error=null,
             state.loader = false,
-            state.user = action.payload as ResponseUserData[]
+            state.user = action.payload as ResponseUserData
         })
 
         .addCase(refreshUsers.rejected, (state, action) =>{
