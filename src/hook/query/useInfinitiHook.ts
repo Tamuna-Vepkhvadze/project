@@ -10,7 +10,7 @@ interface PageData {
   limit: number;
 };
 
-const LIMIT = 20
+const LIMIT = 18
 const useInfinitiHook = () => {
 
   const result = useInfiniteQuery<PageData>({
